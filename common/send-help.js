@@ -1,11 +1,8 @@
 const { Markup, Extra } = require('micro-bot')
 const markup = Extra
   .HTML()
-  .webPreview(false)
   .markup(Markup.inlineKeyboard([
-    Markup.urlButton('GitHub', 'https://github.com/bananiumbot/bot')
+    Markup.urlButton('🤖 Bot source code', 'https://github.com/bananiumbot/bot')
   ]))
 
-module.exports = ({ reply }) => {
-  return reply(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://github.com/bananiumbot/bot">Source</a>`, markup)
-}
+module.exports = ({ reply, i18n }) => reply(i18n.t('common.help'), markup)

@@ -1,0 +1,9 @@
+common:
+  welcome: |
+    Привет, я Бананиум 🍌
+  help: |
+    <b>Lorem ipsum</b> dolor sit amet, consectetur <i>adipiscing</i> elit.
+admin:
+  acces-denied: You shall not pass!
+  ban-help: А кого банить то?
+  user-banned: Баним ${user.first_name}...
