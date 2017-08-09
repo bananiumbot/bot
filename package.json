@@ -20,6 +20,7 @@
   "author": "bananium authors",
   "license": "MIT",
   "dependencies": {
+    "debug": "^3.0.0",
     "micro-bot": "^1.3.0"
   },
   "devDependencies": {
