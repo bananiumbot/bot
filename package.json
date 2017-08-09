@@ -1,0 +1,36 @@
+{
+  "name": "bananium",
+  "version": "0.0.0",
+  "description": "https://t.me/botoid",
+  "repository": {
+    "url": "bananium/bananium",
+    "type": "git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "supervisor -x micro-bot index.js",
+    "lint": "eslint .",
+    "precommit": "npm test",
+    "start": "micro-bot -d ${NOW_URL}",
+    "test": "npm run lint"
+  },
+  "engines": {
+    "node": ">=6.2.0"
+  },
+  "author": "bananium authors",
+  "license": "MIT",
+  "dependencies": {
+    "micro-bot": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.7.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "supervisor": "^0.12.0"
+  }
+}
