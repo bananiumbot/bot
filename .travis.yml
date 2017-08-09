@@ -5,4 +5,5 @@ deployment:
   production:
     branch: master
     commands:
-      node -v
+      - node -v
+      - npm -v
