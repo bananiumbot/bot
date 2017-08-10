@@ -12,11 +12,6 @@ $ npm install
 $ BOT_TOKEN='123:......' npm run dev
 ```
 
-```sh
-$ yarn
-$ BOT_TOKEN='123:......' yarn dev
-```
-
 ## Deployment
 
 This bot can be deployed to [now](https://zeit.co/now) by Zeit.
