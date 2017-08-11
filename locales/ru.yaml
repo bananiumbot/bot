@@ -4,13 +4,12 @@ common:
   help: |
     <b>Lorem ipsum</b> dolor sit amet, consectetur <i>adipiscing</i> elit.
 admin:
-  acces-denied: You shall not pass!
+  acces-denied: 🤦‍♂️
   ban-help: А кого банить то?
+  restrict-help: А кого банить то?
   user-banned: Баним ${user.first_name}...
+  user-restricted: ${user.first_name} помещен в карантин.
 report:
   done: Мы примем все необходимые меры, спасибо.
   help: А кого репортим?
-  notification: |
-    Андрюха, у нас спам! Возможно, флуд. По коням! 🏇
-
-    Чат: "<b>${chat.title}</b>"
+  notification: Андрюха, в чате "<b>${chat.title}</b>" спам! Возможно, флуд. По коням! 🏇

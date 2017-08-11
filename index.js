@@ -6,6 +6,7 @@ const sendWelcome = require('./common/send-welcome')
 const sendHelp = require('./common/send-help')
 const reportUser = require('./common/report-user')
 const banUser = require('./admin/ban-user')
+const restrictUser = require('./admin/restrict-user')
 
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
@@ -18,6 +19,7 @@ bot.use(i18n)
 bot.command('/start', sendWelcome)
 bot.command('/help', sendHelp)
 bot.command('/report', reportUser)
-bot.command('/kick', onlyAdmin, banUser)
+bot.command('/ro', onlyAdmin, restrictUser)
+bot.command('/ban', onlyAdmin, banUser)
 
 module.exports = bot
