@@ -7,6 +7,7 @@ const sendHelp = require('./common/send-help')
 const reportUser = require('./common/report-user')
 const banUser = require('./admin/ban-user')
 const restrictUser = require('./admin/restrict-user')
+const handleUserCommand = require('./utils')
 
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
@@ -21,5 +22,6 @@ bot.command('/help', sendHelp)
 bot.command('/report', reportUser)
 bot.command('/ro', onlyAdmin, restrictUser)
 bot.command('/ban', onlyAdmin, banUser)
+bot.hears(/^!bananium .*/, handleUserCommand)
 
 module.exports = bot
