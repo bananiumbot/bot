@@ -20,5 +20,3 @@ Assuming you've got `now` installed and set up:
 ```sh
 $ now -e BOT_TOKEN='123:......'
 ```
-
-Latest deploy located at: https://bananium.now.sh/_src

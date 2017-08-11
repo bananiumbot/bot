@@ -15,3 +15,5 @@ report:
   notification: Андрюха, в чате "<b>${chat.title}</b>" спам! Возможно, флуд. По коням! 🏇
 utils:
   help: Lorem ipsum
+supergroup:
+  welcome: Привет!
