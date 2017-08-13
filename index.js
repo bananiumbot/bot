@@ -17,7 +17,7 @@ const i18n = new TelegrafI18n({
 const bot = new Composer()
 
 bot.use(i18n)
-bot.on(['new_chat_members', 'new_chat_member'], ({ reply, i18n }) => reply(i18n.t('supergroup.welcome')))
+// bot.on(['new_chat_members', 'new_chat_member'], ({ reply, i18n }) => reply(i18n.t('supergroup.welcome')))
 bot.command('/start', sendWelcome)
 bot.command('/help', sendHelp)
 bot.command('/report', reportUser)
