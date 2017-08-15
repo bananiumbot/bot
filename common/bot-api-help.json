@@ -1,0 +1,652 @@
+[
+  {
+    "url": "https://core.telegram.org/bots/api#making-requests-when-getting-updates",
+    "title": "Making requests when getting updates",
+    "description": "If you're using webhooks, you can perform a request to the Bot API while sending an answer to the webhook. Use either application/json or application/x-www-form-urlencoded or multipart/form-data response content type for passing parameters. Specify the method to be invoked in the method parameter of the request. It's not possible to know that such a request was successful or get its result."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#update",
+    "title": "Update",
+    "description": "This object represents an incoming update.At most one of the optional parameters can be present in any given update."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getupdates",
+    "title": "getUpdates",
+    "description": "Use this method to receive incoming updates using long polling (wiki). An Array of Update objects is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#setwebhook",
+    "title": "setWebhook",
+    "description": "Use this method to specify a url and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified url, containing a JSON-serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts. Returns true."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#deletewebhook",
+    "title": "deleteWebhook",
+    "description": "Use this method to remove webhook integration if you decide to switch back to getUpdates. Returns True on success. Requires no parameters."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getwebhookinfo",
+    "title": "getWebhookInfo",
+    "description": "Use this method to get current webhook status. Requires no parameters. On success, returns a WebhookInfo object. If the bot is using getUpdates, will return an object with the url field empty."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#webhookinfo",
+    "title": "WebhookInfo",
+    "description": "Contains information about the current status of a webhook."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#user",
+    "title": "User",
+    "description": "This object represents a Telegram user or bot."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#chat",
+    "title": "Chat",
+    "description": "This object represents a chat."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#message",
+    "title": "Message",
+    "description": "This object represents a message."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#messageentity",
+    "title": "MessageEntity",
+    "description": "This object represents one special entity in a text message. For example, hashtags, usernames, URLs, etc. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#photosize",
+    "title": "PhotoSize",
+    "description": "This object represents one size of a photo or a file / sticker thumbnail."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#audio",
+    "title": "Audio",
+    "description": "This object represents an audio file to be treated as music by the Telegram clients."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#document",
+    "title": "Document",
+    "description": "This object represents a general file (as opposed to photos, voice messages and audio files)."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#video",
+    "title": "Video",
+    "description": "This object represents a video file."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#voice",
+    "title": "Voice",
+    "description": "This object represents a voice note."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#videonote",
+    "title": "VideoNote",
+    "description": "This object represents a video message (available in Telegram apps as of v.4.0)."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#contact",
+    "title": "Contact",
+    "description": "This object represents a phone contact."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#location",
+    "title": "Location",
+    "description": "This object represents a point on the map."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#venue",
+    "title": "Venue",
+    "description": "This object represents a venue."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#userprofilephotos",
+    "title": "UserProfilePhotos",
+    "description": "This object represent a user's profile pictures."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#file",
+    "title": "File",
+    "description": "This object represents a file ready to be downloaded. The file can be downloaded via the link https://api.telegram.org/file/bot<token>/<file_path>. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling getFile."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#replykeyboardmarkup",
+    "title": "ReplyKeyboardMarkup",
+    "description": "This object represents a custom keyboard with reply options (see Introduction to bots for details and examples)."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#keyboardbutton",
+    "title": "KeyboardButton",
+    "description": "This object represents one button of the reply keyboard. For simple text buttons String can be used instead of this object to specify text of the button. Optional fields are mutually exclusive."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#replykeyboardremove",
+    "title": "ReplyKeyboardRemove",
+    "description": "Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see ReplyKeyboardMarkup)."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinekeyboardmarkup",
+    "title": "InlineKeyboardMarkup",
+    "description": "This object represents an inline keyboard that appears right next to the message it belongs to."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinekeyboardbutton",
+    "title": "InlineKeyboardButton",
+    "description": "This object represents one button of an inline keyboard. You must use exactly one of the optional fields."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#callbackquery",
+    "title": "CallbackQuery",
+    "description": "This object represents an incoming callback query from a callback button in an inline keyboard. If the button that originated the query was attached to a message sent by the bot, the field message will be present. If the button was attached to a message sent via the bot (in inline mode), the field inline_message_id will be present. Exactly one of the fields data or game_short_name will be present."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#forcereply",
+    "title": "ForceReply",
+    "description": "Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’Reply'). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#chatphoto",
+    "title": "ChatPhoto",
+    "description": "This object represents a chat photo."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#chatmember",
+    "title": "ChatMember",
+    "description": "This object contains information about one member of a chat."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#responseparameters",
+    "title": "ResponseParameters",
+    "description": "Contains information about why a request was unsuccessfull."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inputfile",
+    "title": "InputFile",
+    "description": "This object represents the contents of a file to be uploaded. Must be posted using multipart/form-data in the usual way that files are uploaded via the browser."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sending-files",
+    "title": "Sending files",
+    "description": " There are three ways to send files (photos, stickers, audio, media, etc.):"
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inline-mode-objects",
+    "title": "Inline mode objects",
+    "description": "Objects and methods used in the inline mode are described in the Inline mode section."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getme",
+    "title": "getMe",
+    "description": "A simple method for testing your bot's auth token. Requires no parameters. Returns basic information about the bot in form of a User object."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendmessage",
+    "title": "sendMessage",
+    "description": "Use this method to send text messages. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#formatting-options",
+    "title": "Formatting options",
+    "description": "The Bot API supports basic formatting for messages. You can use bold and italic text, as well as inline links and pre-formatted code in your bots' messages. Telegram clients will render them accordingly. You can use either markdown-style or HTML-style formatting."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#forwardmessage",
+    "title": "forwardMessage",
+    "description": "Use this method to forward messages of any kind. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendphoto",
+    "title": "sendPhoto",
+    "description": "Use this method to send photos. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendaudio",
+    "title": "sendAudio",
+    "description": "Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#senddocument",
+    "title": "sendDocument",
+    "description": "Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendvideo",
+    "title": "sendVideo",
+    "description": "Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendvoice",
+    "title": "sendVoice",
+    "description": "Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendvideonote",
+    "title": "sendVideoNote",
+    "description": "As of v.4.0, Telegram clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendlocation",
+    "title": "sendLocation",
+    "description": "Use this method to send point on the map. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendvenue",
+    "title": "sendVenue",
+    "description": "Use this method to send information about a venue. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendcontact",
+    "title": "sendContact",
+    "description": "Use this method to send phone contacts. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendchataction",
+    "title": "sendChatAction",
+    "description": "Use this method when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less (when a message arrives from your bot, Telegram clients clear its typing status). Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getuserprofilephotos",
+    "title": "getUserProfilePhotos",
+    "description": "Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getfile",
+    "title": "getFile",
+    "description": "Use this method to get basic info about a file and prepare it for downloading. For the moment, bots can download files of up to 20MB in size. On success, a File object is returned. The file can then be downloaded via the link https://api.telegram.org/file/bot<token>/<file_path>, where <file_path> is taken from the response. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling getFile again."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#kickchatmember",
+    "title": "kickChatMember",
+    "description": "Use this method to kick a user from a group, a supergroup or a channel. In the case of supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#unbanchatmember",
+    "title": "unbanChatMember",
+    "description": "Use this method to unban a previously kicked user in a supergroup or channel. The user will not return to the group or channel automatically, but will be able to join via link, etc. The bot must be an administrator for this to work. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#restrictchatmember",
+    "title": "restrictChatMember",
+    "description": "Use this method to restrict a user in a supergroup. The bot must be an administrator in the supergroup for this to work and must have the appropriate admin rights. Pass True for all boolean parameters to lift restrictions from a user. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#promotechatmember",
+    "title": "promoteChatMember",
+    "description": "Use this method to promote or demote a user in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Pass False for all boolean parameters to demote a user. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#exportchatinvitelink",
+    "title": "exportChatInviteLink",
+    "description": "Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as String on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#setchatphoto",
+    "title": "setChatPhoto",
+    "description": "Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#deletechatphoto",
+    "title": "deleteChatPhoto",
+    "description": "Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#setchattitle",
+    "title": "setChatTitle",
+    "description": "Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#setchatdescription",
+    "title": "setChatDescription",
+    "description": "Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#pinchatmessage",
+    "title": "pinChatMessage",
+    "description": "Use this method to pin a message in a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#unpinchatmessage",
+    "title": "unpinChatMessage",
+    "description": "Use this method to unpin a message in a supergroup chat. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#leavechat",
+    "title": "leaveChat",
+    "description": "Use this method for your bot to leave a group, supergroup or channel. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getchat",
+    "title": "getChat",
+    "description": "Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a Chat object on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getchatadministrators",
+    "title": "getChatAdministrators",
+    "description": "Use this method to get a list of administrators in a chat. On success, returns an Array of ChatMember objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getchatmemberscount",
+    "title": "getChatMembersCount",
+    "description": "Use this method to get the number of members in a chat. Returns Int on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getchatmember",
+    "title": "getChatMember",
+    "description": "Use this method to get information about a member of a chat. Returns a ChatMember object on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#answercallbackquery",
+    "title": "answerCallbackQuery",
+    "description": "Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inline-mode-methods",
+    "title": "Inline mode methods",
+    "description": "Methods and objects used in the inline mode are described in the Inline mode section."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#editmessagetext",
+    "title": "editMessageText",
+    "description": "Use this method to edit text and game messages sent by the bot or via the bot (for inline bots). On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#editmessagecaption",
+    "title": "editMessageCaption",
+    "description": "Use this method to edit captions of messages sent by the bot or via the bot (for inline bots). On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#editmessagereplymarkup",
+    "title": "editMessageReplyMarkup",
+    "description": "Use this method to edit only the reply markup of messages sent by the bot or via the bot (for inline bots).  On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#deletemessage",
+    "title": "deleteMessage",
+    "description": "Use this method to delete a message, including service messages, with the following limitations:- A message can only be deleted if it was sent less than 48 hours ago.- Bots can delete outgoing messages in groups and supergroups.- Bots granted can_post_messages permissions can delete outgoing messages in channels.- If the bot is an administrator of a group, it can delete any message there.- If the bot has can_delete_messages permission in a supergroup or a channel, it can delete any message there.Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sticker",
+    "title": "Sticker",
+    "description": "This object represents a sticker."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#stickerset",
+    "title": "StickerSet",
+    "description": "This object represents a sticker set."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#maskposition",
+    "title": "MaskPosition",
+    "description": "This object describes the position on faces where a mask should be placed by default."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendsticker",
+    "title": "sendSticker",
+    "description": "Use this method to send .webp stickers. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getstickerset",
+    "title": "getStickerSet",
+    "description": "Use this method to get a sticker set. On success, a StickerSet object is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#uploadstickerfile",
+    "title": "uploadStickerFile",
+    "description": "Use this method to upload a .png file with a sticker for later use in createNewStickerSet and addStickerToSet methods (can be used multiple times). Returns the uploaded File on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#createnewstickerset",
+    "title": "createNewStickerSet",
+    "description": "Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#addstickertoset",
+    "title": "addStickerToSet",
+    "description": "Use this method to add a new sticker to a set created by the bot. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#setstickerpositioninset",
+    "title": "setStickerPositionInSet",
+    "description": "Use this method to move a sticker in a set created by the bot to a specific position . Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#deletestickerfromset",
+    "title": "deleteStickerFromSet",
+    "description": "Use this method to delete a sticker from a set created by the bot. Returns True on success."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequery",
+    "title": "InlineQuery",
+    "description": "This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#answerinlinequery",
+    "title": "answerInlineQuery",
+    "description": "Use this method to send answers to an inline query. On success, True is returned.No more than 50 results per query are allowed."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresult",
+    "title": "InlineQueryResult",
+    "description": "This object represents one result of an inline query. Telegram clients currently support results of the following 20 types:"
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultarticle",
+    "title": "InlineQueryResultArticle",
+    "description": "Represents a link to an article or web page."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultphoto",
+    "title": "InlineQueryResultPhoto",
+    "description": "Represents a link to a photo. By default, this photo will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the photo."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultgif",
+    "title": "InlineQueryResultGif",
+    "description": "Represents a link to an animated GIF file. By default, this animated GIF file will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultmpeg4gif",
+    "title": "InlineQueryResultMpeg4Gif",
+    "description": "Represents a link to a video animation (H.264/MPEG-4 AVC video without sound). By default, this animated MPEG-4 file will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultvideo",
+    "title": "InlineQueryResultVideo",
+    "description": "Represents a link to a page containing an embedded video player or a video file. By default, this video file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the video."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultaudio",
+    "title": "InlineQueryResultAudio",
+    "description": "Represents a link to an mp3 audio file. By default, this audio file will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the audio."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultvoice",
+    "title": "InlineQueryResultVoice",
+    "description": "Represents a link to a voice recording in an .ogg container encoded with OPUS. By default, this voice recording will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the the voice message."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultdocument",
+    "title": "InlineQueryResultDocument",
+    "description": "Represents a link to a file. By default, this file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the file. Currently, only .PDF and .ZIP files can be sent using this method."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultlocation",
+    "title": "InlineQueryResultLocation",
+    "description": "Represents a location on a map. By default, the location will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the location."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultvenue",
+    "title": "InlineQueryResultVenue",
+    "description": "Represents a venue. By default, the venue will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the venue."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcontact",
+    "title": "InlineQueryResultContact",
+    "description": "Represents a contact with a phone number. By default, this contact will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the contact."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultgame",
+    "title": "InlineQueryResultGame",
+    "description": "Represents a Game."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedphoto",
+    "title": "InlineQueryResultCachedPhoto",
+    "description": "Represents a link to a photo stored on the Telegram servers. By default, this photo will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the photo."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedgif",
+    "title": "InlineQueryResultCachedGif",
+    "description": "Represents a link to an animated GIF file stored on the Telegram servers. By default, this animated GIF file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with specified content instead of the animation."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedmpeg4gif",
+    "title": "InlineQueryResultCachedMpeg4Gif",
+    "description": "Represents a link to a video animation (H.264/MPEG-4 AVC video without sound) stored on the Telegram servers. By default, this animated MPEG-4 file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedsticker",
+    "title": "InlineQueryResultCachedSticker",
+    "description": "Represents a link to a sticker stored on the Telegram servers. By default, this sticker will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the sticker."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcacheddocument",
+    "title": "InlineQueryResultCachedDocument",
+    "description": "Represents a link to a file stored on the Telegram servers. By default, this file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the file."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedvideo",
+    "title": "InlineQueryResultCachedVideo",
+    "description": "Represents a link to a video file stored on the Telegram servers. By default, this video file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the video."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedvoice",
+    "title": "InlineQueryResultCachedVoice",
+    "description": "Represents a link to a voice message stored on the Telegram servers. By default, this voice message will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the voice message."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inlinequeryresultcachedaudio",
+    "title": "InlineQueryResultCachedAudio",
+    "description": "Represents a link to an mp3 audio file stored on the Telegram servers. By default, this audio file will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the audio."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inputmessagecontent",
+    "title": "InputMessageContent",
+    "description": "This object represents the content of a message to be sent as a result of an inline query. Telegram clients currently support the following 4 types:"
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inputtextmessagecontent",
+    "title": "InputTextMessageContent",
+    "description": "Represents the content of a text message to be sent as the result of an inline query. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inputlocationmessagecontent",
+    "title": "InputLocationMessageContent",
+    "description": "Represents the content of a location message to be sent as the result of an inline query. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inputvenuemessagecontent",
+    "title": "InputVenueMessageContent",
+    "description": "Represents the content of a venue message to be sent as the result of an inline query. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#inputcontactmessagecontent",
+    "title": "InputContactMessageContent",
+    "description": "Represents the content of a contact message to be sent as the result of an inline query. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#choseninlineresult",
+    "title": "ChosenInlineResult",
+    "description": "Represents a result of an inline query that was chosen by the user and sent to their chat partner. "
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendinvoice",
+    "title": "sendInvoice",
+    "description": "Use this method to send invoices. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#answershippingquery",
+    "title": "answerShippingQuery",
+    "description": "If you sent an invoice requesting a shipping address and the parameter is_flexible was specified, the Bot API will send an Update with a shipping_query field to the bot. Use this method to reply to shipping queries. On success, True is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#answerprecheckoutquery",
+    "title": "answerPreCheckoutQuery",
+    "description": "Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an Update with the field pre_checkout_query. Use this method to respond to such pre-checkout queries. On success, True is returned. Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#labeledprice",
+    "title": "LabeledPrice",
+    "description": "This object represents a portion of the price for goods or services."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#invoice",
+    "title": "Invoice",
+    "description": "This object contains basic information about an invoice."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#shippingaddress",
+    "title": "ShippingAddress",
+    "description": "This object represents a shipping address."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#orderinfo",
+    "title": "OrderInfo",
+    "description": "This object represents information about an order."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#shippingoption",
+    "title": "ShippingOption",
+    "description": "This object represents one shipping option."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#successfulpayment",
+    "title": "SuccessfulPayment",
+    "description": "This object contains basic information about a successful payment."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#shippingquery",
+    "title": "ShippingQuery",
+    "description": "This object contains information about an incoming shipping query."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#precheckoutquery",
+    "title": "PreCheckoutQuery",
+    "description": "This object contains information about an incoming pre-checkout query."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#sendgame",
+    "title": "sendGame",
+    "description": "Use this method to send a game. On success, the sent Message is returned."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#game",
+    "title": "Game",
+    "description": "This object represents a game. Use BotFather to create and edit games, their short names will act as unique identifiers."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#animation",
+    "title": "Animation",
+    "description": "You can provide an animation for your game so that it looks stylish in chats (check out Lumberjack for an example). This object represents an animation file to be displayed in the message containing a game."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#callbackgame",
+    "title": "CallbackGame",
+    "description": "A placeholder, currently holds no information. Use BotFather to set up your game."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#setgamescore",
+    "title": "setGameScore",
+    "description": "Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns True. Returns an error, if the new score is not greater than the user's current score in the chat and force is False."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#getgamehighscores",
+    "title": "getGameHighScores",
+    "description": "Use this method to get data for high score tables. Will return the score of the specified user and several of his neighbors in a game. On success, returns an Array of GameHighScore objects."
+  },
+  {
+    "url": "https://core.telegram.org/bots/api#gamehighscore",
+    "title": "GameHighScore",
+    "description": "This object represents one row of the high scores table for a game."
+  }
+]
