@@ -37,3 +37,4 @@ coverage
 
 # WebStorm
 .idea
+.env
