@@ -26,7 +26,7 @@ bot.command('/help', sendHelp)
 bot.command('/report', reportUser)
 bot.command('/ro', onlyAdmin, restrictUser)
 bot.command('/ban', onlyAdmin, banUser)
-bot.hears(/^!bananium .*/, handleUserCommand)
+bot.hears(/^!b .*/, handleUserCommand)
 bot.on('audio', ({ message, reply }) => reply(`https://tg.now.sh/${message.audio.file_id}`))
 
 module.exports = bot

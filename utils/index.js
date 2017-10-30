@@ -15,7 +15,7 @@ async function sendGag ({ replyWithVideo, i18n }) {
 
 const bot = new Composer()
 
-bot.hears('!bananium joke', sendGag)
+bot.hears('!b joke', sendGag)
 bot.use(sendUtilsHelp)
 
 module.exports = bot

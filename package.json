@@ -2,8 +2,9 @@
   "name": "bananium",
   "version": "0.0.1",
   "description": "https://t.me/botoid",
+  "private": true,
   "repository": {
-    "url": "bananium/bananium",
+    "url": "git+ssh://git@github.com/bananium/bananium",
     "type": "git"
   },
   "main": "index.js",
@@ -15,7 +16,7 @@
     "test": "npm run lint"
   },
   "engines": {
-    "node": ">=8.2.1"
+    "node": ">=8.5.0"
   },
   "author": "bananium authors",
   "license": "MIT",

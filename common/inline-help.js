@@ -3,7 +3,7 @@ const helpTopics = require('./bot-api-help.json')
 
 const fuse = new Fuse(helpTopics, {
   shouldSort: true,
-  threshold: 0.3,
+  threshold: 0.25,
   keys: ['title', 'description', 'meta']
 })
 
