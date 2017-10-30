@@ -4,7 +4,7 @@
   "description": "https://t.me/botoid",
   "private": true,
   "repository": {
-    "url": "git+ssh://git@github.com/bananium/bananium",
+    "url": "git+ssh://git@github.com/bananiumbot/bot",
     "type": "git"
   },
   "main": "index.js",
