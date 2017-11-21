@@ -2,7 +2,7 @@ common:
   welcome: |
     Привет, я Бананиум 🍌
   help: |
-    <b>Lorem ipsum</b> dolor sit amet, consectetur <i>adipiscing</i> elit.
+    <b> Бананиум 🍌</b>
 admin:
   acces-denied: 🤦‍♂️
   ban-help: А кого банить то?
