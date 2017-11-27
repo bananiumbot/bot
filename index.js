@@ -20,7 +20,7 @@ const i18n = new TelegrafI18n({
 const bot = new Composer()
 
 bot.use(i18n)
-bot.on('new_chat_member', banBot)
+bot.on('new_chat_members', banBot)
 bot.on('inline_query', inlineHelp)
 bot.hashtag(handleHashtag)
 bot.command('/start', sendWelcome)
