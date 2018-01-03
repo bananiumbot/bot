@@ -1,5 +1,6 @@
 const { Composer, Markup } = require('micro-bot')
 const fetch = require('node-fetch')
+const onlyAdmin = require('./../middlewares/only-admin')
 
 async function sendGag ({ replyWithVideo, i18n }) {
   const page = Math.floor(Math.random() * 100)
@@ -23,8 +24,8 @@ const AuctionKeyboardExtra = Markup
 const bot = new Composer()
 
 bot.hears('!joke', sendGag)
-bot.hears('!auction', ({ reply }) => reply('Auction mode on', AuctionKeyboardExtra))
-bot.hears('!clear', ({ reply }) => reply('Auction mode off', HideKeyboardExtra))
+bot.hears('!auction', onlyAdmin, ({ reply }) => reply('Auction mode on', AuctionKeyboardExtra))
+bot.hears('!clear', onlyAdmin, ({ reply }) => reply('Auction mode off', HideKeyboardExtra))
 bot.hears('!joke', sendGag)
 
 module.exports = bot
