@@ -23,7 +23,7 @@
   "dependencies": {
     "debug": "^3.0.0",
     "fuse.js": "^3.0.5",
-    "micro-bot": "^2.1.0",
+    "micro-bot": "^2.2.1",
     "node-fetch": "^1.7.2",
     "telegraf-i18n": "^6.0.2"
   },
