@@ -21,9 +21,7 @@ const i18n = new TelegrafI18n({
 const bot = new Composer()
 
 bot.use(i18n)
-bot.on('new_chat_members', banBot)
-bot.on('inline_query', inlineHelp)
-bot.hashtag(handleHashtag)
+
 bot.start(sendWelcome)
 bot.command('help', sendHelp)
 bot.command('about', sendHelp)
@@ -33,5 +31,9 @@ bot.hears('!report', reportUser)
 bot.hears('!ro', onlyAdmin, restrictUser)
 bot.hears('!ban', onlyAdmin, banUser)
 bot.hears(/^!\S+$/, handleUserCommand)
+
+bot.on('new_chat_members', banBot)
+bot.on('inline_query', inlineHelp)
+bot.hashtag(handleHashtag)
 
 module.exports = bot
