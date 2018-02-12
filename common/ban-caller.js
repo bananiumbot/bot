@@ -2,8 +2,8 @@ const { randomBytes } = require('crypto')
 const { Extra } = require('micro-bot')
 
 const randomRange = {
-  start: 2,
-  end: 20
+  start: 10,
+  end: 60
 }
 
 const getRandomInt = (min, max) => {
