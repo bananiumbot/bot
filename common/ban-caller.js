@@ -17,5 +17,9 @@ module.exports = async (ctx) => {
   const roPeriod = getRandomInt(randomRange.start, randomRange.end)
   const until = now + 60 * roPeriod
   ctx.restrictChatMember(ctx.from.id, { until_date: until })
-  return ctx.reply(`Вы выиграли RO на ${roPeriod} мин.`, Extra.inReplyTo(ctx.message.message_id))
+  const message = await ctx.reply(`Вы выиграли RO на ${roPeriod} мин.\n\nЭто сообщение удалиться секунд через 5.`, Extra.inReplyTo(ctx.message.message_id))
+  setTimeout(() => {
+    ctx.deleteMessage()
+    ctx.deleteMessage(message.message_id)
+  }, 5000)
 }
