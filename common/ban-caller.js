@@ -14,7 +14,8 @@ const getRandomInt = (min, max) => {
 
 module.exports = async (ctx) => {
   const now = Math.floor(Date.now() / 1000)
-  const until = now + 60 * getRandomInt(randomRange.start, randomRange.end)
+  const roPeriod = getRandomInt(randomRange.start, randomRange.end)
+  const until = now + 60 * roPeriod
   ctx.restrictChatMember(ctx.from.id, { until_date: until })
-  return ctx.reply('Не вопрос!', Extra.inReplyTo(ctx.message.message_id))
+  return ctx.reply(`Вы выиграли RO на ${roPeriod} мин.`, Extra.inReplyTo(ctx.message.message_id))
 }
