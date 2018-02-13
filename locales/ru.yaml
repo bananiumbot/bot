@@ -17,3 +17,6 @@ utils:
   help: Lorem ipsum
 supergroup:
   welcome: Привет!
+self-ban: |
+  Вы выиграли RO на ${period} мин.
+  Это сообщение удалится секунд через 5.

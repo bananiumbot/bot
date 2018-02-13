@@ -14,10 +14,11 @@ const getRandomInt = (min, max) => {
 
 module.exports = async (ctx) => {
   const now = Math.floor(Date.now() / 1000)
-  const roPeriod = getRandomInt(randomRange.start, randomRange.end)
-  const until = now + 60 * roPeriod
+  const period = getRandomInt(randomRange.start, randomRange.end)
+  const until = now + 60 * period
   ctx.restrictChatMember(ctx.from.id, { until_date: until })
-  const message = await ctx.reply(`Вы выиграли RO на ${roPeriod} мин.\n\nЭто сообщение удалиться секунд через 5.`, Extra.inReplyTo(ctx.message.message_id))
+  const answer = ctx.i18n.t('self-ban', { period })
+  const message = await ctx.reply(answer, Extra.inReplyTo(ctx.message.message_id))
   setTimeout(() => {
     ctx.deleteMessage()
     ctx.deleteMessage(message.message_id)
