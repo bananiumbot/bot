@@ -25,7 +25,7 @@ bot.use(i18n)
 bot.start(sendWelcome)
 bot.command('help', sendHelp)
 bot.command('about', sendHelp)
-bot.command('ban_me_please', banCaller)
+bot.command(['do_not_click', 'ban_me_please'], banCaller)
 
 bot.hears('!report', reportUser)
 bot.hears('!ro', onlyAdmin, restrictUser)

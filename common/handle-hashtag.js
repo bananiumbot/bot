@@ -1,5 +1,6 @@
 const naiveDB = {
-  '#fsm': 'https://groosha.gitbooks.io/telegram-bot-lessons/content/chapter11.html #fsm'
+  '#fsm': 'https://groosha.gitbooks.io/telegram-bot-lessons/content/chapter11.html #fsm',
+  '#webhook': 'https://core.telegram.org/bots/webhooks #webhook'
 }
 
 module.exports = ({ message, reply }) => {
