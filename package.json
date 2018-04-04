@@ -24,15 +24,15 @@
     "debug": "^3.0.0",
     "fuse.js": "^3.0.5",
     "micro-bot": "^2.2.2",
-    "node-fetch": "^1.7.2",
+    "node-fetch": "^2.1.2",
     "telegraf-i18n": "^6.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
     "eslint": "^4.5.0",
-    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.0.0",
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
