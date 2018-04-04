@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - 8
 cache: npm
-before_script: npm i now
+before_script: npm install now
 script: npm run deploy
 env:
   global:
