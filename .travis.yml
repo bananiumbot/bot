@@ -4,6 +4,9 @@ node_js:
 cache: npm
 before_script: npm install now
 script: npm run deploy
+branches:
+  only:
+    - master
 env:
   global:
   - secure: f8+EmF0xd1aG5I69mtH9fEpP4JstTw+Ylk4GGoNUOQAU5OWSEZJxc9s1wBvOEnIwgSfI7MudpHCNjC8AYqv+zshNS6cR+hB8oBgFriIp7r7v2rGI1fxB+ta1pn3CP/jZUlZ2BqxBen8PiusE/lFvEFmlExDlRPJV8EshbuAL77MUJiwmLNvoZ0wf7lxy1WhrD6AjI7VC1e1ebSSs+rVLL0E24gHqQOnI+HDZnXkD9crbgQJNM3Q1qEztvVsxWdUe8ibpol1v/ZHchA5Mqk+OVSJ2kotIWI8SJ44oY3uXLKAD9bYld3A4Hsv4jrXwLLOF7qExEPawc4JS0Ygl4FoCQYGsx6+JZOjfpQUKbHjwawj/abRvs4pHSf/nJiCPpPW1w6GB3yVTXWYZK+emF4JW+FBbk1Q6Sf6FH2HSqucDuA4AQoxkO/DVuY3PU6T2xroL1DygAEIirJj1nVbWGbaI9WzXLAPPPiJaCGTItV6XAHfhUI1zXjru4h1DBtzUSrgM2awCG88EUJQVgp6Z/o+AwiDOVUzwCxmdmlKhYzTnVRIgPRKRfrCwmqFgd6IbwHMd20dF+vi2Y4OCRP8V0Fkln2AgGGcj/a7h4JNDGnbzoyE83hBf1c+WUze33J8Rvx9IVISyOhRi7UtmtcKl+glWnIx4S3tlkSmVXwsMAuiK4B8=
