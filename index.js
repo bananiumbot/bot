@@ -28,7 +28,7 @@ bot.command('about', sendHelp)
 bot.command(['do_not_click', 'ban_me_please'], banCaller)
 
 bot.hears('!report', reportUser)
-bot.hears('!ro', onlyAdmin, restrictUser)
+bot.hears(/^!ro($|\s.*)/, onlyAdmin, restrictUser)
 bot.hears('!ban', onlyAdmin, banUser)
 bot.hears(/^!\S+$/, handleUserCommand)
 
