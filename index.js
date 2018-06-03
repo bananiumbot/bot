@@ -32,7 +32,7 @@ bot.hears('!report', reportUser)
 bot.hears(/^!ro($|\s.*)/, onlyAdmin, restrictUser)
 bot.hears('!ban', onlyAdmin, banUser)
 bot.hears(/^!\S+$/, handleUserCommand)
-bot.hears(/(\sфункционала?(\s|$))/im, handleFunction)
+bot.hears(/(?:^|\s)функционала?(?:$|\s)/i, handleFunction)
 
 bot.on('new_chat_members', banBot)
 bot.on('inline_query', inlineHelp)
