@@ -3,7 +3,7 @@ const { Extra } = require('micro-bot')
 
 const randomRange = {
   start: 10,
-  end: 60
+  end: 60 * 24 * 365
 }
 
 const getRandomInt = (min, max) => {
