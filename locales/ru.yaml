@@ -24,3 +24,17 @@ supergroup:
 self-ban: |
   Вы выиграли RO на ${period} мин.
   Это сообщение удалится секунд через 5.
+topics:
+  webhook: |
+    https://core.telegram.org/bots/webhooks
+
+    #webhook
+  fsm: |
+    Python
+    <a href="https://surik00.gitbooks.io/aiogram-lessons/content/chapter3.html">aiogram</a>
+    <a href="https://groosha.gitbooks.io/telegram-bot-lessons/content/chapter11.html">pyTelegramBotAPI</a>
+
+    Node
+    <a href="https://github.com/telegraf/telegraf/blob/develop/docs/examples/scenes-bot.js">Telegraf</a>
+
+    #fsm
