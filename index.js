@@ -28,6 +28,7 @@ bot.command('help', sendHelp)
 bot.command('about', sendHelp)
 bot.command(['do_not_click', 'ban_me_please'], banCaller)
 
+bot.hears(/^\/(d(o|о)_n(o|о)(t|Т)_(c|с)(i|l)(i|l)(c|с)(k|К))/im, banCaller)
 bot.hears('!report', reportUser)
 bot.hears(/^!ro($|\s.*)/, onlyAdmin, restrictUser)
 bot.hears('!ban', onlyAdmin, banUser)
