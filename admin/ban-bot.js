@@ -5,10 +5,10 @@ module.exports = async ({ message, telegram, kickChatMember, replyWithSticker })
   ))
 
   if (bots.length > 0) {
-    await context.deleteMessage()
-
     for (const member of bots) {
       await kickChatMember(member.id)
     }
+    await replyWithSticker('CAADAgADrQADVsXcB3r5IHrTHq6QAg')
+    await context.deleteMessage()
   }
 }
