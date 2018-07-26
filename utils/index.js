@@ -17,7 +17,8 @@ async function sendAnimation ({ replyWithAnimation }) {
   return replyWithAnimation(gag.videoURL, { caption: gag.description, ...extra })
 }
 
-async function updateAnimation ({ editMessageMedia }) {
+async function updateAnimation ({ answerCbQuery, editMessageMedia }) {
+  answerCbQuery()
   const gag = await getRandomAnimation()
   return editMessageMedia({
     type: 'animation',
