@@ -11,7 +11,7 @@ const banCaller = require('./common/ban-caller')
 const banUser = require('./admin/ban-user')
 const banBot = require('./admin/ban-bot')
 const restrictUser = require('./admin/restrict-user')
-const handleUserCommand = require('./utils')
+const utils = require('./utils')
 
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
@@ -32,11 +32,10 @@ bot.hears(/^\/(b|ь)(a|а)(n|п)_m(e|е)_(p|р)(l|I)(e|е)(a|а)s(e|е)/im, banC
 bot.hears('!report', reportUser)
 bot.hears(/^!ro($|\s.*)/, onlyAdmin, restrictUser)
 bot.hears('!ban', onlyAdmin, banUser)
-bot.hears(/^!\S+$/, handleUserCommand)
 bot.hears(/(?:^|\s)функционала?(?:$|\s)/i, ({ replyWithHTML, i18n }) => replyWithHTML(i18n.t('utils.func')))
-
 bot.on('new_chat_members', banBot)
 bot.on('inline_query', inlineHelp)
 bot.hashtag(handleHashtag)
+bot.use(utils)
 
 module.exports = bot
