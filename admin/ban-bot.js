@@ -1,4 +1,4 @@
-module.exports = async ({ message, kickChatMember, replyWithSticker }) => {
+module.exports = async ({ message, kickChatMember, replyWithSticker, deleteMessage }) => {
   const blacklistes = message.new_chat_members.filter((member) => (
     member.is_bot ||
     member.first_name.startsWith(`╋VX,QQ（同号）`) ||
@@ -11,4 +11,6 @@ module.exports = async ({ message, kickChatMember, replyWithSticker }) => {
     }
     await replyWithSticker('CAADAgADrQADVsXcB3r5IHrTHq6QAg')
   }
+  
+  await deleteMessage()
 }
