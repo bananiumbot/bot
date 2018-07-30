@@ -9,7 +9,6 @@ module.exports = async ({ message, kickChatMember, replyWithSticker, deleteMessa
     for (const member of blacklistes) {
       await kickChatMember(member.id)
     }
-    await replyWithSticker('CAADAgADrQADVsXcB3r5IHrTHq6QAg')
   }
   
   await deleteMessage()
