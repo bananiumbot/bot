@@ -17,7 +17,12 @@ async function sendAnimation ({ replyWithAnimation }) {
   return replyWithAnimation(gag.videoURL, { caption: gag.description, ...extra })
 }
 
-async function updateAnimation ({ answerCbQuery, editMessageMedia }) {
+async function updateAnimation ({ answerCbQuery, editMessageMedia, callbackQuery }) {
+  const lastUpdated = callbackQuery.message.edit_date || callbackQuery.message.date
+  const delta = Math.floor(Date.now() / 1000) - lastUpdated
+  if (delta < 10) {
+    return answerCbQuery('⏳ Ожидайте')
+  }
   answerCbQuery()
   const gag = await getRandomAnimation()
   return editMessageMedia({
@@ -29,7 +34,7 @@ async function updateAnimation ({ answerCbQuery, editMessageMedia }) {
 
 const bot = new Composer()
 
-bot.hears('!joke', sendAnimation)
+bot.hears(['!joke', '!tv'], sendAnimation)
 bot.action('moar', updateAnimation)
 
 module.exports = bot

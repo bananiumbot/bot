@@ -10,6 +10,6 @@ module.exports = async ({ message, kickChatMember, replyWithSticker, deleteMessa
       await kickChatMember(member.id)
     }
   }
-  
+
   await deleteMessage()
 }
