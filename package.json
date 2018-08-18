@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "supervisor -x micro-bot index.js",
-    "deploy": "now -e NODE_ENV=production -e BOT_TOKEN=$BOT_TOKEN --token $NOW_TOKEN --npm",
+    "deploy": "now -e NODE_ENV=production -e BOT_TOKEN=$BOT_TOKEN --token $NOW_TOKEN --npm --public",
     "lint": "eslint .",
     "precommit": "npm test",
     "start": "micro-bot -d ${NOW_URL}",
