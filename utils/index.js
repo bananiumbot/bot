@@ -34,6 +34,18 @@ async function updateAnimation ({ answerCbQuery, editMessageMedia, callbackQuery
 
 const bot = new Composer()
 
+bot.hears('!url', ({ message, reply }) => {
+  const targetMessage = message.reply_to_message
+  const fileId = (targetMessage.animation && targetMessage.animation.file_id) ||
+    (targetMessage.audio && targetMessage.audio.file_id) ||
+    (targetMessage.sticker && targetMessage.sticker.file_id) ||
+    (targetMessage.video_note && targetMessage.video_note.file_id) ||
+    (targetMessage.video && targetMessage.video.file_id) ||
+    (targetMessage.voice && targetMessage.voice.file_id) ||
+    (targetMessage.document && targetMessage.document.file_id) ||
+    (targetMessage.photo && targetMessage.photo[targetMessage.photo.length - 1].file_id)
+  return fileId && reply(`https://tg.now.sh/${fileId}`)
+})
 bot.hears(['!joke', '!tv'], sendAnimation)
 bot.action('moar', updateAnimation)
 
