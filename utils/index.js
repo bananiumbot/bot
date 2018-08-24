@@ -46,6 +46,12 @@ bot.hears('!url', ({ message, reply }) => {
     (targetMessage.photo && targetMessage.photo[targetMessage.photo.length - 1].file_id)
   return fileId && reply(`https://tg.now.sh/${fileId}`)
 })
+
+bot.hears('!src', ({ message, replyWithHTML }) => {
+  const targetMessage = message.reply_to_message
+  return targetMessage && replyWithHTML(`<pre>${JSON.stringify(targetMessage, null, 2)}</pre>`)
+})
+
 bot.hears(['!joke', '!tv'], sendAnimation)
 bot.action('moar', updateAnimation)
 
