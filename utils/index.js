@@ -34,14 +34,6 @@ async function updateAnimation ({ answerCbQuery, editMessageMedia, callbackQuery
 
 const bot = new Composer()
 
-bot.on('message', async ({ message, reply, deleteMessage }, next) => {
-  if (message.from && message.from.id === 282213187 && Math.random() > 0.4) {
-    await deleteMessage()
-    await reply(`Сообщение от ${message.from.first_name} ${message.from.last_name} удалено цензурой`)
-  }
-  return next()
-})
-
 bot.hears('!url', ({ message, reply }) => {
   const targetMessage = message.reply_to_message
   const fileId = (targetMessage.animation && targetMessage.animation.file_id) ||
