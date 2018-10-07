@@ -3,7 +3,7 @@ const helpTopics = require('./bot-api-help.json')
 
 const fuse = new Fuse(helpTopics, {
   shouldSort: true,
-  threshold: 0.15,
+  threshold: 0.10,
   keys: ['title', 'description', 'meta']
 })
 
@@ -23,5 +23,5 @@ module.exports = ({ inlineQuery, answerInlineQuery }) => {
         disable_web_page_preview: true
       }
     }))
-  return answerInlineQuery(results, {next_offset: offset + 30})
+  return answerInlineQuery(results, { next_offset: offset + 30 })
 }
