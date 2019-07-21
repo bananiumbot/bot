@@ -4,7 +4,7 @@ const helpTopics = require('./bot-api-help.json')
 const fuse = new Fuse(helpTopics, {
   shouldSort: true,
   threshold: 0.10,
-  keys: ['title', 'description', 'meta']
+  keys: ['title', 'description', 'meta'],
 })
 
 module.exports = ({ inlineQuery, answerInlineQuery }) => {
@@ -20,8 +20,8 @@ module.exports = ({ inlineQuery, answerInlineQuery }) => {
       input_message_content: {
         parse_mode: 'HTML',
         message_text: `<b>${title}</b>\n${description}\n\n${url}`,
-        disable_web_page_preview: true
-      }
+        disable_web_page_preview: true,
+      },
     }))
   return answerInlineQuery(results, { next_offset: offset + 30 })
 }

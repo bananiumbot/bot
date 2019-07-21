@@ -16,7 +16,7 @@ const utils = require('./utils')
 
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
-  directory: path.resolve(__dirname, 'locales')
+  directory: path.resolve(__dirname, 'locales'),
 })
 
 const bot = new Composer()
