@@ -2,7 +2,7 @@ const { Composer, Markup, Extra } = require('micro-bot')
 const fetch = require('node-fetch')
 
 const extra = Extra.markup(Markup.inlineKeyboard([
-  Markup.callbackButton('MOAR', 'moar')
+  Markup.callbackButton('MOAR', 'moar'),
 ]))
 
 async function getRandomAnimation () {
@@ -28,7 +28,7 @@ async function updateAnimation ({ answerCbQuery, editMessageMedia, callbackQuery
   return editMessageMedia({
     type: 'animation',
     media: gag.videoURL,
-    caption: gag.description
+    caption: gag.description,
   }, extra)
 }
 

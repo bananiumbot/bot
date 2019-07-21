@@ -7,6 +7,7 @@ const sendHelp = require('./common/send-help')
 const reportUser = require('./common/report-user')
 const informMetaUser = require('./common/inform-meta-user')
 const inlineHelp = require('./common/inline-help')
+const mediaRestrict = require('./common/media-restrict')
 const handleHashtag = require('./common/handle-hashtag')
 const banCaller = require('./common/ban-caller')
 const banUser = require('./admin/ban-user')
@@ -16,7 +17,7 @@ const utils = require('./utils')
 
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
-  directory: path.resolve(__dirname, 'locales')
+  directory: path.resolve(__dirname, 'locales'),
 })
 
 const bot = new Composer()
@@ -34,6 +35,7 @@ bot.hears('!ban', onlyAdmin, banUser)
 bot.hears(/(?:^|\s)функционала?(?:$|\s)/i, ({ replyWithHTML, i18n }) => replyWithHTML(i18n.t('utils.func')))
 bot.on('new_chat_members', banBot)
 bot.on('inline_query', inlineHelp)
+bot.on('voice', mediaRestrict)
 bot.hashtag(handleHashtag)
 bot.use(utils)
 
