@@ -1,5 +1,4 @@
 // in future this resticter can be used for other message types
-// for example animated stickers
 
 const oneDay = 60 * 60 * 24
 const restrictOptions = {
