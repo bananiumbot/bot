@@ -1,4 +1,4 @@
-const KnownHashtags = ['fsm', 'webhook']
+const KnownHashtags = ['fsm', 'webhook' 'aws', 'chats', 'api']
 
 module.exports = ({ message, i18n, replyWithHTML }) => {
   const answer = message.entities
