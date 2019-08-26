@@ -43,3 +43,17 @@ topics:
     <a href="https://github.com/telegraf/telegraf/blob/develop/docs/examples/scenes-bot.js">Telegraf</a>
 
     #fsm
+    
+      aws: |
+    беслатный сервер aws на год
+    <a href="https://aws.amazon.com/ru/ec2/?did=ft_card&trk=ft_card">Amazon EC2</a>
+
+    #aws
+
+  chats: |
+    <a href="https://github.com/aleksey1109/telegram-list">репа с телеграмм чатами</a>
+
+    #chats
+
+  api: |
+    <a href="https://core.telegram.org/api">telegram api</a>
