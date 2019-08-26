@@ -44,7 +44,7 @@ topics:
 
     #fsm
     
-      aws: |
+  aws: |
     беслатный сервер aws на год
     <a href="https://aws.amazon.com/ru/ec2/?did=ft_card&trk=ft_card">Amazon EC2</a>
 
