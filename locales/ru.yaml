@@ -8,7 +8,7 @@ admin:
   ban-help: А кого банить то?
   restrict-help: А кого банить то?
   user-banned: Баним ${user.first_name}...
-  user-restricted: ${user.first_name} помещен в карантин.
+  user-restricted: ${user.first_name} помещен в самоизоляцию.
 report:
   done: Мы примем все необходимые меры, спасибо.
   help: А кого репортим?
