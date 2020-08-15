@@ -1,4 +1,4 @@
-const { Composer, Markup, Extra } = require('micro-bot')
+const { Composer, Markup, Extra } = require('telegraf')
 const fetch = require('node-fetch')
 
 const extra = Extra.markup(Markup.inlineKeyboard([

@@ -1,4 +1,4 @@
-const { Extra, optional } = require('micro-bot')
+const { Extra, optional } = require('telegraf')
 
 module.exports = optional(
   ({ message }) => message && message.reply_to_message,

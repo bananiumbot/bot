@@ -1,4 +1,4 @@
-const { Extra } = require('micro-bot')
+const { Extra } = require('telegraf')
 
 module.exports = async ({ message, reply, i18n, telegram }) => {
   const answerOptions = Extra.inReplyTo(message.message_id)

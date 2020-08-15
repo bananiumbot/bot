@@ -1,4 +1,4 @@
-const { Markup, Extra } = require('micro-bot')
+const { Markup, Extra } = require('telegraf')
 const markup = Extra
   .HTML()
   .markup(Markup.inlineKeyboard([

@@ -1,5 +1,5 @@
 const { randomBytes } = require('crypto')
-const { Extra } = require('micro-bot')
+const { Extra } = require('telegraf')
 
 const randomRange = {
   start: 10,
