@@ -1,20 +1,9 @@
 const { randomBytes } = require('crypto')
 const { Extra } = require('telegraf')
 
-const randomRange = {
-  start: 10,
-  end: 60,
-}
-
-const getRandomInt = (min, max) => {
-  // Math.random() is not cryptographically secure
-  const randomNumber = randomBytes(4).readUIntLE(0, 4) / 0xFFFFFFFF
-  return Math.floor(randomNumber * (max - min + 1)) + min
-}
-
 module.exports = async (ctx) => {
-  const now = Math.floor(Date.now() / 1000)
-  const period = getRandomInt(randomRange.start, randomRange.end)
+  const now = Math.round(Date.now() / 1000)
+  const period = Math.round(Math.random() * 50) + 10
   const until = now + 60 * period
   ctx.restrictChatMember(ctx.from.id, { until_date: until })
   const answer = ctx.i18n.t('self-ban', { period })
