@@ -22,7 +22,7 @@ supergroup:
   welcome: Привет!
 self-ban: |
   Вы выиграли RO на ${period} мин.
-  Это сообщение удалится секунд через 5.
+  Это сообщение удалится через 5 секунд.
 topics:
   webhook: |
     https://core.telegram.org/bots/webhooks
