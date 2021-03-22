@@ -12,7 +12,7 @@ admin:
 report:
   done: Мы примем все необходимые меры, спасибо.
   help: А кого репортим?
-  notification: Андрюха, в чате "<b>${chat.title}</b>" спам! Возможно, флуд. По коням! 🏇
+  notification: ${user.first_name}, в чате <a href="https://t.me/@${chat.username}">${chat.title}</a> спам! Возможно, флуд. По коням! 🏇
 meta:
   done: |
     Пожалуйста, не задавайте мета-вопросов в чате!
@@ -30,7 +30,8 @@ topics:
     #webhook
   fsm: |
     Python
-    <a href="https://surik00.gitbooks.io/aiogram-lessons/content/chapter3.html">aiogram</a>
+    <a href="https://mastergroosha.github.io/telegram-tutorial-2/fsm">aiogram</a> (Текстовые уроки)
+    <a href="https://www.youtube.com/watch?v=O_pPNlXMzsw">aiogram</a> (Youtube)
     <a href="https://groosha.gitbooks.io/telegram-bot-lessons/content/chapter11.html">pyTelegramBotAPI</a>
 
     Node
