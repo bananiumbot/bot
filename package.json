@@ -21,7 +21,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "fuse.js": "^6.4.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "telegraf": "^3.38.0",
     "telegraf-i18n": "^6.5.0"
   },
